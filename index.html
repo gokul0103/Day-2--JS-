@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h2>Vote Validator</h2>
+    <label for="">Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    <label for="">Age</label>
+    <input type="number" id="age" placeholder="Enter your age">
+    <button onclick="vote()">Submit</button>
+    <p id="res">the result will be display here 👇</p>
+  </div>
+    <script>
+        function vote(){
+            var name= document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var res = document.getElementById("res");
+            if(age>=18){
+                    res.innerHTML= name+"You are eligible"
+            }else{
+                res.innerHTML= name+"You are not eligible"
+            }
+        }
+    </script>
+    <style>
+     body{
+        background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    div{
+        border-radius: 10%;
+        display: flex;
+        height: 150px;
+        width: 150x;
+        padding: 50px;
+        border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+        flex-direction: column;
+    }
+    </style>
+</body>
+</html>
